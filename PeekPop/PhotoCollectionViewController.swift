@@ -29,79 +29,67 @@ class PhotoCollectionViewController: UICollectionViewController, UIViewControlle
         
         super.viewDidLoad()
         
-        if( traitCollection.forceTouchCapability == .Available){
+        if( traitCollection.forceTouchCapability == .available){
             
-            registerForPreviewingWithDelegate(self, sourceView: view)
+            let _ = registerForPreviewing(with: self, sourceView: view)
             
         }
         
     }
-
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
-        
-    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if( segue.identifier == "sgPhotoDetail" ){
             
-            let photo = photos[(collectionView?.indexPathsForSelectedItems()![0].row)!]
+            let photo = photos[(collectionView?.indexPathsForSelectedItems![0].row)!]
             
-            let vc = segue.destinationViewController as! DetailViewController
+            let vc = segue.destination as! DetailViewController
             vc.photo = photo
             
         }
-        
     }
 
     // MARK: UICollectionViewDataSource methods
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
-        
     }
 
-
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
-        
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! PhotoCollectionViewCell
-    
-        // Configure the cell
-        let photo = photos[indexPath.row]
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let image = UIImage(named: photo.imageName) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
+        
+            // Configure the cell
+            let photo = photos[indexPath.row]
             
-            cell.imageView.image = image
-            
-        }else {
-            
-            cell.imageView.image = UIImage(named: "image-not-found")
-            
-        }
+            if let image = UIImage(named: photo.imageName) {
+                
+                cell.imageView.image = image
+                
+            }else {
+                
+                cell.imageView.image = UIImage(named: "image-not-found")
+                
+            }
 
-        return cell
+            return cell
     }
     
     // MARK: Trait collection delegate methods
-    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         
     }
     
     // MARK: UIViewControllerPreviewingDelegate methods
-    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         
-        guard let indexPath = collectionView?.indexPathForItemAtPoint(location) else { return nil }
+        guard let indexPath = collectionView?.indexPathForItem(at: location) else { return nil }
         
-        guard let cell = collectionView?.cellForItemAtIndexPath(indexPath) else { return nil }
+        guard let cell = collectionView?.cellForItem(at: indexPath) else { return nil }
         
-        guard let detailVC = storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as? DetailViewController else { return nil }
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return nil }
         
         let photo = photos[indexPath.row]
         detailVC.photo = photo
@@ -113,9 +101,9 @@ class PhotoCollectionViewController: UICollectionViewController, UIViewControlle
         return detailVC
     }
     
-    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         
-        showViewController(viewControllerToCommit, sender: self)
+        show(viewControllerToCommit, sender: self)
         
     }
     

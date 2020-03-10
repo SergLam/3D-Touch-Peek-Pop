@@ -11,10 +11,10 @@
 		86A4F0AA1BC43D40004ECDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A4F0A81BC43D40004ECDF6 /* Main.storyboard */; };
 		86A4F0AC1BC43D40004ECDF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A4F0AB1BC43D40004ECDF6 /* Assets.xcassets */; };
 		86A4F0AF1BC43D40004ECDF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A4F0AD1BC43D40004ECDF6 /* LaunchScreen.storyboard */; };
-		86A4F0B71BC43EA8004ECDF6 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4F0B61BC43EA8004ECDF6 /* PhotoCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		86A4F0B91BC43ED5004ECDF6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4F0B81BC43ED5004ECDF6 /* Photo.swift */; settings = {ASSET_TAGS = (); }; };
-		86A4F0BB1BC4411B004ECDF6 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4F0BA1BC4411B004ECDF6 /* PhotoCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		86CEAF191BC447DF002665B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CEAF181BC447DF002665B0 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		86A4F0B71BC43EA8004ECDF6 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4F0B61BC43EA8004ECDF6 /* PhotoCollectionViewController.swift */; };
+		86A4F0B91BC43ED5004ECDF6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4F0B81BC43ED5004ECDF6 /* Photo.swift */; };
+		86A4F0BB1BC4411B004ECDF6 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4F0BA1BC4411B004ECDF6 /* PhotoCollectionViewCell.swift */; };
+		86CEAF191BC447DF002665B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CEAF181BC447DF002665B0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,17 +115,18 @@
 		86A4F0991BC43D40004ECDF6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Frederik Jacques";
 				TargetAttributes = {
 					86A4F0A01BC43D40004ECDF6 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = MDWBDEPC5G;
 					};
 				};
 			};
 			buildConfigurationList = 86A4F09C1BC43D40004ECDF6 /* Build configuration list for PBXProject "PeekPop" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -197,13 +198,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -242,13 +253,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -267,6 +288,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -276,10 +298,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				INFOPLIST_FILE = PeekPop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.thenerd.tutorials.PeekPop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -287,10 +311,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				INFOPLIST_FILE = PeekPop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.thenerd.tutorials.PeekPop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
